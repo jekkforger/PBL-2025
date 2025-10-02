@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Profile</title>
+  <title>Kontak</title>
   <style>
     :root { --accent:#2563eb; --text:#222; --muted:#6b7280; }
     * { box-sizing: border-box; }
@@ -30,16 +30,31 @@
     /* LAYOUT */
     .container { max-width: 900px; margin: 24px auto; padding: 0 16px; }
 
-    /* PROFILE BOX */
-    .profile {
+    /* FORM */
+    form {
+      max-width: 520px;
       border: 1px solid #e5e7eb;
       border-radius: 10px;
       padding: 20px;
     }
-    .profile h1 { margin: 0 0 12px; }
-    .profile ul { margin: 0; padding-left: 18px; }
-    .profile li { margin: 6px 0; }
-    .muted { color: var(--muted); }
+    label { display:block; margin:8px 0 6px; font-weight:600; }
+    input, textarea {
+      width:100%;
+      padding:10px;
+      border:1px solid #cfd4dc;
+      border-radius:6px;
+    }
+    button {
+      margin-top:12px;
+      padding:10px 14px;
+      border:1px solid var(--accent);
+      background: var(--accent);
+      color:#fff;
+      border-radius:6px;
+      cursor:pointer;
+      font-weight:600;
+    }
+    button:hover { filter: brightness(0.95); }
   </style>
 </head>
 <body>
@@ -47,24 +62,26 @@
   <nav class="nav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="#" class="active">Profile</a>
-    <a href="contact.html">Kontak</a>
+    <a href="profile.html">Profile</a>
+    <a href="#" class="active">Kontak</a>
     <a href="formulir.html">Formulir Pendaftaran</a>
   </nav>
 
   <main class="container">
-    <section class="profile">
-      <h1>Profile Diri</h1>
-      <ul>
-        <li><strong>Nama:</strong> Fahrizal Mudzaqi Maulana</li>
-        <li><strong>Usia:</strong> 21 Tahun</li>
-        <li><strong>Email:</strong> <a href="mailto:zakimaulana0754@gmail.com">zakimaulana0754@gmail.com</a></li>
-        <li><strong>Alamat:</strong> Padalarang, Bandung Barat</li>
-        <li><strong>Hobi:</strong> Bermain game, bermain gitar</li>
-        <li><strong>Pendidikan Terakhir:</strong> D3 Teknik Informatika</li>
-      </ul>
-      <p class="muted">Terima kasih sudah berkunjung ke halaman profil.</p>
-    </section>
+    <h1>Kontak</h1>
+
+    <form action="#" onsubmit="alert('Terima kasih! Pesan Anda sudah dikirim.'); return false;">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="pesan">Pesan:</label>
+      <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+      <button type="submit">Kirim</button>
+    </form>
   </main>
 
 </body>
