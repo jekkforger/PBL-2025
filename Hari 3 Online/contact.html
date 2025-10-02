@@ -5,56 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kontak</title>
   <style>
-    :root { --accent:#2563eb; --text:#222; --muted:#6b7280; }
     * { box-sizing: border-box; }
-    body { font-family: Arial, Helvetica, sans-serif; color: var(--text); margin: 0; background:#fff; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      color: #222;
+      background: #fff;
+    }
 
     .nav {
       display: flex;
-      gap: 12px;
-      padding: 12px 16px;
-      border-bottom: 1px solid #e5e7eb;
-      background: #f9fafb;
+      gap: 8px;
+      padding: 10px 16px;
+      border-bottom: 1px solid #ddd;
+      background: #f5f5f5;
     }
     .nav a {
       text-decoration: none;
-      padding: 8px 12px;
-      border: 1px solid #e5e7eb;
-      border-radius: 6px;
-      color: var(--text);
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      color: #222;
       font-weight: 600;
     }
-    .nav a:hover { background:#eef2ff; border-color:#dbeafe; }
-    .nav a.active { color:#fff; background:var(--accent); border-color:var(--accent); }
+    .nav a:hover { background: #eee; }
+    .nav a.active {
+      background: #2563eb;
+      color: #fff;
+      border-color: #2563eb;
+    }
 
-    /* LAYOUT */
-    .container { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
 
-    /* FORM */
     form {
       max-width: 520px;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
     }
     label { display:block; margin:8px 0 6px; font-weight:600; }
     input, textarea {
       width:100%;
       padding:10px;
-      border:1px solid #cfd4dc;
+      border:1px solid #ccc;
       border-radius:6px;
     }
+    textarea { min-height: 90px; resize: vertical; }
     button {
       margin-top:12px;
       padding:10px 14px;
-      border:1px solid var(--accent);
-      background: var(--accent);
+      border:1px solid #2563eb;
+      background:#2563eb;
       color:#fff;
       border-radius:6px;
       cursor:pointer;
       font-weight:600;
     }
-    button:hover { filter: brightness(0.95); }
+    button:hover { filter: brightness(0.97); }
   </style>
 </head>
 <body>
@@ -78,7 +91,7 @@
       <input type="email" id="email" name="email" required />
 
       <label for="pesan">Pesan:</label>
-      <textarea id="pesan" name="pesan" rows="5" required></textarea>
+      <textarea id="pesan" name="pesan" required></textarea>
 
       <button type="submit">Kirim</button>
     </form>
