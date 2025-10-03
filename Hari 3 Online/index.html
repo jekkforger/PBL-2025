@@ -1,75 +1,332 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PBL 2025</title>
-  <style>
-    /* CSS dasar & sederhana */
-    * { box-sizing: border-box; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marina Food | Homepage</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        color: #222;
+        background: #fff;
+      }
+      a {
+        color: #1f2937;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      color: #222;
-      background: #fff;
-    }
+      /* HEADER */
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 16px;
+        border-bottom: 1px solid #ddd;
+        background: #f9fafb;
+      }
+      .brand {
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .nav {
+        display: flex;
+        gap: 12px;
+        font-size: 14px;
+      }
+      .nav a {
+        padding: 4px 6px;
+      }
 
-    /* Navbar sederhana */
-    .nav {
-      display: flex;
-      gap: 8px;
-      padding: 10px 16px;
-      border-bottom: 1px solid #ddd;
-      background: #f5f5f5;
-    }
-    .nav a {
-      text-decoration: none;
-      display: inline-block;
-      padding: 6px 10px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      color: #222;
-      font-weight: 600;
-    }
-    .nav a:hover { background: #eee; }
-    .nav a.active {
-      background: #2563eb;
-      color: #fff;
-      border-color: #2563eb;
-    }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
 
-    /* Konten */
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 0 16px;
-    }
-    .welcome {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 16px;
-    }
-    h1 { margin: 0 0 8px; }
-    p  { margin: 0; color: #555; }
-  </style>
-</head>
-<body>
+      /* HERO */
+      .hero {
+        text-align: center;
+        padding: 28px 0;
+      }
+      .hero img {
+        width: 120px;
+        height: auto;
+        display: block;
+        margin: 0 auto 12px;
+      }
+      .hero h2 {
+        margin: 0 0 8px;
+        font-size: 20px;
+      }
+      .hero p {
+        margin: 0 0 10px;
+        font-size: 14px;
+        color: #555;
+      }
+      .hero .cta {
+        font-weight: 700;
+        text-decoration: underline;
+      }
 
-  <nav class="nav">
-    <a href="#" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="profile.html">Profile</a>
-    <a href="contact.html">Kontak</a>
-    <a href="formulir.html">Formulir Pendaftaran</a>
-  </nav>
+      .divider {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 18px 0;
+      }
 
-  <main class="container">
-    <section class="welcome">
-      <h1>Selamat Datang!</h1>
-      <p>PBL 2025</p>
+      /* SECTION */
+      .section-title {
+        text-align: center;
+        font-weight: 600;
+        margin: 0 0 12px;
+        font-size: 14px;
+        color: #333;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        justify-items: center;
+        align-items: start;
+        margin-bottom: 18px;
+      }
+
+      .cat img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 8px;
+      }
+      .cat .label {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .prod img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+      }
+
+      /* FOOTER */
+      .promo {
+        background: #f3f4f6;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 16px 0;
+        margin-top: 20px;
+      }
+      .promo .container {
+        text-align: center;
+      }
+      .promo h4 {
+        margin: 0 0 6px;
+        font-size: 18px;
+      }
+      .promo p {
+        margin: 0 0 8px;
+      }
+      .promo a {
+        font-weight: 700;
+        text-decoration: underline;
+      }
+
+      .site-footer {
+        padding: 18px 0;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+      .site-footer h4 {
+        margin: 0 0 8px;
+        font-size: 14px;
+      }
+      .site-footer p,
+      .site-footer li {
+        margin: 0 0 6px;
+        color: #555;
+        font-size: 14px;
+      }
+      .site-footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-bottom {
+        border-top: 1px solid #ddd;
+        text-align: center;
+        color: #666;
+        font-size: 12px;
+        padding: 10px 0 16px;
+      }
+
+      /* Responsif sederhana */
+      @media (max-width: 800px) {
+        .grid,
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 480px) {
+        .grid,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="topbar">
+      <div class="brand">Marina Food</div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#kategori">Kategori</a>
+        <a href="#produk">Produk Baru</a>
+        <a href="contact.html">Kontak</a>
+        <a href="#keranjang">Keranjang</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <img
+          src="https://via.placeholder.com/120x90?text=Food"
+          alt="Ilustrasi makanan"
+        />
+        <h2>Makanan Terbaru Musim Ini</h2>
+        <p>
+          Temukan kenikmatan terbaru dengan produk pilihan kami yang
+          berkualitas.
+        </p>
+        <a class="cta" href="#produk">&gt;&gt; BELANJA SEKARANG &lt;&lt;</a>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- KATEGORI PILIHAN -->
+      <h3 id="kategori" class="section-title">Kategori Pilihan</h3>
+      <section class="grid">
+        <div class="cat">
+          <img
+            src="https://via.placeholder.com/180?text=Indonesia"
+            alt="Makanan Indonesia"
+          />
+          <div class="label">Makanan Indonesia</div>
+        </div>
+        <div class="cat">
+          <img
+            src="https://via.placeholder.com/180?text=Jepang"
+            alt="Makanan Jepang"
+          />
+          <div class="label">Makanan Jepang</div>
+        </div>
+        <div class="cat">
+          <img
+            src="https://via.placeholder.com/180?text=Korea"
+            alt="Makanan Korea"
+          />
+          <div class="label">Makanan Korea</div>
+        </div>
+        <div class="cat">
+          <img
+            src="https://via.placeholder.com/180?text=Italia"
+            alt="Makanan Italia"
+          />
+          <div class="label">Makanan Italia</div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PRODUK TERLARIS -->
+      <h3 id="produk" class="section-title">Produk Terlaris</h3>
+      <section class="grid">
+        <div class="prod">
+          <img
+            src="https://via.placeholder.com/200x150?text=Dessert+1"
+            alt="Produk 1"
+          />
+        </div>
+        <div class="prod">
+          <img
+            src="https://via.placeholder.com/200x150?text=Dessert+2"
+            alt="Produk 2"
+          />
+        </div>
+        <div class="prod">
+          <img
+            src="https://via.placeholder.com/200x150?text=Dessert+3"
+            alt="Produk 3"
+          />
+        </div>
+        <div class="prod">
+          <img
+            src="https://via.placeholder.com/200x150?text=Dessert+4"
+            alt="Produk 4"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <section class="promo">
+      <div class="container">
+        <h4>Diskon Akhir Tahun!</h4>
+        <p>Dapatkan potongan harga hingga 50% untuk item tertentu. Terbatas!</p>
+        <a href="#promo">&gt;&gt; Lihat Promo &lt;&lt;</a>
+      </div>
     </section>
-  </main>
 
-</body>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>Marina Food</h4>
+          <p>
+            Toko online terpercaya dengan produk berkualitas dan harga
+            terjangkau.
+          </p>
+        </div>
+        <div>
+          <h4>Link Cepat</h4>
+          <ul>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#privasi">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hubungi Kami</h4>
+          <p>
+            Email: <a href="mailto:admin@marina.com">admin@marina.com</a><br />
+            Telepon: 0812-3456-7890
+          </p>
+        </div>
+        <div>
+          <h4>Ikuti Kami</h4>
+          <ul>
+            <li><a href="#fb">Facebook</a></li>
+            <li><a href="#ig">Instagram</a></li>
+            <li><a href="#tw">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Marina. All Rights Reserved.</div>
+    </footer>
+  </body>
 </html>
