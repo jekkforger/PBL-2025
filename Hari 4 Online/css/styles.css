@@ -1,5 +1,5 @@
 div {
-    display:inline-block;
+    display: inline-block;
 }
 
 .satu {
@@ -20,4 +20,5 @@ div {
     height: 50px;
     background-color: rgb(204, 228, 202);
     margin: 10px 20px 30px 40px;
+    /* padding: 20px; */
 }

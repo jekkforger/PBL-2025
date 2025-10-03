@@ -3,196 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marina Food | Homepage</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        color: #222;
-        background: #fff;
-      }
-      a {
-        color: #1f2937;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-
-      /* HEADER */
-      .topbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 16px;
-        border-bottom: 1px solid #ddd;
-        background: #f9fafb;
-      }
-      .brand {
-        font-weight: 700;
-        font-size: 20px;
-      }
-      .nav {
-        display: flex;
-        gap: 12px;
-        font-size: 14px;
-      }
-      .nav a {
-        padding: 4px 6px;
-      }
-
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 16px;
-      }
-
-      /* HERO */
-      .hero {
-        text-align: center;
-        padding: 28px 0;
-      }
-      .hero img {
-        width: 120px;
-        height: auto;
-        display: block;
-        margin: 0 auto 12px;
-      }
-      .hero h2 {
-        margin: 0 0 8px;
-        font-size: 20px;
-      }
-      .hero p {
-        margin: 0 0 10px;
-        font-size: 14px;
-        color: #555;
-      }
-      .hero .cta {
-        font-weight: 700;
-        text-decoration: underline;
-      }
-
-      .divider {
-        border: none;
-        border-top: 1px solid #ddd;
-        margin: 18px 0;
-      }
-
-      /* SECTION */
-      .section-title {
-        text-align: center;
-        font-weight: 600;
-        margin: 0 0 12px;
-        font-size: 14px;
-        color: #333;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
-        justify-items: center;
-        align-items: start;
-        margin-bottom: 18px;
-      }
-
-      .cat img {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        display: block;
-        margin: 0 auto 8px;
-      }
-      .cat .label {
-        text-align: center;
-        font-size: 13px;
-        font-weight: 600;
-      }
-
-      .prod img {
-        width: 200px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 8px;
-        display: block;
-      }
-
-      /* FOOTER */
-      .promo {
-        background: #f3f4f6;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        padding: 16px 0;
-        margin-top: 20px;
-      }
-      .promo .container {
-        text-align: center;
-      }
-      .promo h4 {
-        margin: 0 0 6px;
-        font-size: 18px;
-      }
-      .promo p {
-        margin: 0 0 8px;
-      }
-      .promo a {
-        font-weight: 700;
-        text-decoration: underline;
-      }
-
-      .site-footer {
-        padding: 18px 0;
-      }
-      .footer-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
-      }
-      .site-footer h4 {
-        margin: 0 0 8px;
-        font-size: 14px;
-      }
-      .site-footer p,
-      .site-footer li {
-        margin: 0 0 6px;
-        color: #555;
-        font-size: 14px;
-      }
-      .site-footer ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .footer-bottom {
-        border-top: 1px solid #ddd;
-        text-align: center;
-        color: #666;
-        font-size: 12px;
-        padding: 10px 0 16px;
-      }
-
-      /* Responsif sederhana */
-      @media (max-width: 800px) {
-        .grid,
-        .footer-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      @media (max-width: 480px) {
-        .grid,
-        .footer-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    <title>Fahrizal Food | Homepage</title>
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <!-- HEADER -->
     <header class="topbar">
-      <div class="brand">Marina Food</div>
+      <div class="brand">Fahrizal Food</div>
       <nav class="nav">
         <a href="#">Home</a>
         <a href="#kategori">Kategori</a>
@@ -203,12 +19,8 @@
     </header>
 
     <main class="container">
-      <!-- HERO -->
       <section class="hero">
-        <img
-          src="https://via.placeholder.com/120x90?text=Food"
-          alt="Ilustrasi makanan"
-        />
+        <img src="./assets/img/Logo.jpg" alt="Ilustrasi makanan" />
         <h2>Makanan Terbaru Musim Ini</h2>
         <p>
           Temukan kenikmatan terbaru dengan produk pilihan kami yang
@@ -219,36 +31,62 @@
 
       <hr class="divider" />
 
-      <!-- KATEGORI PILIHAN -->
       <h3 id="kategori" class="section-title">Kategori Pilihan</h3>
       <section class="grid">
         <div class="cat">
-          <img
-            src="https://via.placeholder.com/180?text=Indonesia"
-            alt="Makanan Indonesia"
-          />
+          <img src="./assets/img/gambar4.jpg" alt="Makanan Indonesia" />
           <div class="label">Makanan Indonesia</div>
+          <p class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+            aliquam laudantium eum impedit vitae quas necessitatibus modi illo!
+            Sed blanditiis consequuntur reprehenderit et dolore quas nobis iste
+            culpa reiciendis similique? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Porro quisquam, itaque repellendus consectetur
+            culpa atque nobis perspiciatis deleniti provident eaque fugiat
+            cupiditate libero error molestiae iure, dolorum ipsa veniam
+            adipisci.
+          </p>
         </div>
         <div class="cat">
-          <img
-            src="https://via.placeholder.com/180?text=Jepang"
-            alt="Makanan Jepang"
-          />
+          <img src="./assets/img/gambar1.jpg" alt="Makanan Jepang" />
           <div class="label">Makanan Jepang</div>
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed eum
+            iure, reiciendis et id exercitationem vel hic aliquid possimus
+            temporibus neque, officia voluptatum quam eveniet fugiat
+            reprehenderit nesciunt, molestias perspiciatis? Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Molestiae alias ratione,
+            voluptas soluta et similique dolores, cumque inventore
+            exercitationem a velit omnis neque illum officia? Quis voluptate
+            commodi ea dolorem.
+          </p>
         </div>
         <div class="cat">
-          <img
-            src="https://via.placeholder.com/180?text=Korea"
-            alt="Makanan Korea"
-          />
+          <img src="./assets/img/gambar2.jpg" alt="Makanan Korea" />
           <div class="label">Makanan Korea</div>
+          <p class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fugit
+            facilis minus corporis ipsam provident amet, libero rem labore
+            dolorum alias delectus! Architecto fugit maxime omnis natus aperiam
+            consequatur recusandae? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Mollitia natus quia dolores molestiae eius omnis
+            molestias, nihil nesciunt debitis illo reprehenderit aperiam odio
+            tempore vero incidunt ea, iusto recusandae. Provident?
+          </p>
         </div>
         <div class="cat">
-          <img
-            src="https://via.placeholder.com/180?text=Italia"
-            alt="Makanan Italia"
-          />
+          <img src="./assets/img/gambar3.jpg" alt="Makanan Italia" />
           <div class="label">Makanan Italia</div>
+          <p class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+            numquam accusamus assumenda maxime quibusdam earum accusantium
+            officia ex eligendi! Reiciendis quibusdam ducimus amet minus
+            excepturi exercitationem labore possimus vero facere! Lorem ipsum
+            dolor sit, amet consectetur adipisicing elit. Ipsa, sit quia. Sequi
+            ducimus corporis voluptatibus dicta quasi officiis sit obcaecati
+            praesentium in delectus impedit, adipisci eos sunt dolor provident
+            alias.
+          </p>
         </div>
       </section>
 
@@ -258,28 +96,40 @@
       <h3 id="produk" class="section-title">Produk Terlaris</h3>
       <section class="grid">
         <div class="prod">
-          <img
-            src="https://via.placeholder.com/200x150?text=Dessert+1"
-            alt="Produk 1"
-          />
+          <img src="./assets/img/gambar5.jpg" alt="Produk 1" />
+          <p class="desc">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
+            animi nihil officiis accusamus tempora aperiam est. Voluptatibus
+            deleniti porro ratione, iusto, soluta pariatur aspernatur qui odit
+            nobis laudantium optio. Repellat?
+          </p>
         </div>
         <div class="prod">
-          <img
-            src="https://via.placeholder.com/200x150?text=Dessert+2"
-            alt="Produk 2"
-          />
+          <img src="./assets/img/gambar6.jpg" alt="Produk 2" />
+          <p class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab omnis,
+            repellendus adipisci vitae, neque corporis harum quibusdam odio
+            accusantium culpa voluptatibus eveniet illum ullam non temporibus
+            odit, delectus minima aliquid?
+          </p>
         </div>
         <div class="prod">
-          <img
-            src="https://via.placeholder.com/200x150?text=Dessert+3"
-            alt="Produk 3"
-          />
+          <img src="./assets/img/gambar7.jpg" alt="Produk 3" />
+          <p class="desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid
+            sapiente ea accusamus similique soluta repellat officiis quo
+            doloremque aspernatur nesciunt. Obcaecati dignissimos, qui maxime
+            inventore dolore recusandae ducimus. Facilis, recusandae?
+          </p>
         </div>
         <div class="prod">
-          <img
-            src="https://via.placeholder.com/200x150?text=Dessert+4"
-            alt="Produk 4"
-          />
+          <img src="./assets/img/gambar8.jpg" alt="Produk 4" />
+          <p class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nam
+            fugit! Facere tempore illum molestias nobis qui, est optio delectus
+            dolore voluptate! Veniam aperiam vero corporis animi cumque,
+            accusamus at?
+          </p>
         </div>
       </section>
     </main>
@@ -321,7 +171,7 @@
           <h4>Ikuti Kami</h4>
           <ul>
             <li><a href="#fb">Facebook</a></li>
-            <li><a href="#ig">Instagram</a></li>
+            <li><a href="https://instagram.com/jekkforger">Instagram</a></li>
             <li><a href="#tw">Twitter</a></li>
           </ul>
         </div>
